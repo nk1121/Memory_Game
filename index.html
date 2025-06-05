@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and page settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background image for the page -->
+    <div class="background-image"></div>
+    
+    <!-- Header section with title and navigation buttons -->
+    <header>
+        <h1>Memory Game</h1>
+        <nav>
+            <!-- Navigation buttons -->
+            <button id="playGameBtn">Play Game</button>
+            <button id="viewRulesBtn">View Rules</button>
+            <button id="settingsBtn">Settings</button>
+            <button id="statsBtn">Stats</button>
+        </nav>
+    </header>
+    
+    <!-- Main content area -->
+    <main>
+        <!-- Game Area Section: Displays game details and cards -->
+        <section id="gameArea" class="hidden">
+            <!-- Game information panel -->
+            <div id="gameInfo">
+                <!-- Player name display -->
+                <div class="info-item">
+                    <span class="info-label">Player:</span>
+                    <span id="playerName" class="info-value">Guest</span>
+                </div>
+                <!-- Moves counter -->
+                <div class="info-item">
+                    <span class="info-label">Moves:</span>
+                    <span id="movesCount" class="info-value">0</span>
+                </div>
+                <!-- Time elapsed display -->
+                <div class="info-item">
+                    <span class="info-label">Time:</span>
+                    <span id="timeElapsed" class="info-value">0</span>
+                    <span class="info-unit">s</span>
+                </div>
+                <!-- Restart button -->
+                <button id="restartBtn">Restart Game</button>
+            </div>
+            <!-- Container for game cards -->
+            <div id="cardsContainer"></div>
+        </section>
+        
+        <!-- Stats Section: Displays top scores -->
+        <section id="stats" class="hidden">
+            <h2>Top Scores</h2>
+            <!-- Table for dynamically populated stats -->
+            <table id="statsTable" border="1">
+                <!-- Table content will be populated via JavaScript -->
+            </table>
+        </section>
+        
+        <!-- Rules Section: Explains how to play the game -->
+        <section id="rules" class="hidden">
+            <div class="rules-container">
+                <h2>How to Play</h2>
+                <p class="rules-intro">Welcome to the Memory Game! Follow these simple steps to play the game:</p>
+                <ul class="rules-list">
+                    <li>Click on any card to reveal it.</li>
+                    <li>Try to find its matching pair by clicking on another card.</li>
+                    <li>If the cards match, they will turn blank.</li>
+                    <li>If they don't match, they will flip back over.</li>
+                    <li>Match all pairs as quickly as possible to win!</li>
+                </ul>
+                <p class="rules-note">Tip: The fewer moves you make and the faster you complete the game, the higher your score!</p>
+            </div>
+        </section>
+        
+        <!-- Settings Section: Allows customization of game settings -->
+        <section id="settings" class="hidden">
+            <h2>Game Settings</h2>
+            <form id="settingsForm">
+                <!-- Player name input field -->
+                <div class="setting-group">
+                    <label for="playerNameInput">Player Name</label>
+                    <input type="text" id="playerNameInput" placeholder="Enter your name">
+                </div>
+                <!-- Difficulty level selection -->
+                <div class="setting-group">
+                    <label for="cardCount">Difficulty Level</label>
+                    <select id="cardCount">
+                        <option value="8">Easy (8 cards)</option>
+                        <option value="16">Medium (16 cards)</option>
+                        <option value="36">Hard (36 cards)</option>
+                        <option value="48">Expert (48 cards)</option>
+                    </select>
+                </div>
+                <!-- Save settings button -->
+                <button type="submit" class="settings-submit">Save Settings</button>
+            </form>
+        </section>
+    </main>
+    
+    <!-- External scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
