@@ -123,4 +123,4 @@ The Memory Game is a fully functional web application built with HTML, CSS, and 
 - **Nandana Krishna** 
 
 - 📧 nandanakrishna4523@gmail.com
--📚 This project was developed as part of the University of Greenwich Module: ELEE-1159 Web Systems Engineering   
+- 📚 This project was developed as part of the University of Greenwich Module: ELEE-1159 Web Systems Engineering   
